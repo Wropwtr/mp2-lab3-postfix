@@ -27,8 +27,11 @@ void main(){
 			cin >> s;
 			try{
 				s = toPost(s);
+				cout << "Postfix notation: " << s;
+				cout << endl;
 				rezult = postRez(s, getVals(s));
-				cout << rezult << endl;
+				cout << "Rezult of calculation: " << rezult;
+				cout << endl;
 			}
 			catch(...){
 				cout << "You enter not correct data\n";
