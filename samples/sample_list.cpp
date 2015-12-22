@@ -31,10 +31,16 @@ void main(){
 	}
 	l->show();
 
-	cout << "6)Get first element key\n";
-	cout << "\t" << l->getFirst()->key << endl;
+	cout << "6)Insert 7 before key 3\n";
+	try{
+		l->insert_a(3, 7);
+	} catch(...){
+		cout << "\tNo item with key 3\n";
+	}
+	l->show();
 
-	//delete l;
+	cout << "7)Get first element key\n";
+	cout << "\t" << l->getFirst()->key << endl;
 
 	return;
 }

@@ -81,7 +81,12 @@ string toPost(string exp){
 map<char, double> getVals(string postExp){
     cout << "Input values:\n";
 	map<char, double> vals;
-    for ( int i = 0; i < (int)postExp.length(); i++){
+
+	int i = 0;
+	int len =(int) postExp.length();
+	if (len > 1 && isalpha(postExp[0]) && postExp[len-1] == '=' )
+		i = 1;
+    for (; i < (int)postExp.length(); i++){
 		if ( isalpha(postExp[i]) && vals.find(postExp[i])==vals.end() ){
             try{
                 cout << postExp[i] << "= ";
